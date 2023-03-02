@@ -7,17 +7,19 @@ const loadData = () => {
 }
 const displayData = (dataName) => {
     console.log(dataName);
+
     dataName.forEach(element => {
         console.log(element);
-
         const cardContainer = document.getElementById('card-container')
         const newDiv = document.createElement('div')
         newDiv.classList.add('col')
+
         newDiv.innerHTML = `
+        
         <div class="card">
         <img class="img-size" src="${element.image}" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
+          <h5 class="card-title">Features</h5>
           <p class="card-text">1.${element.features[0]} <br> 2.${element.features[1]} <br> 3.${element.features[2]} </p>
           <hr>
           <div class="d-flex d-flex justify-content-between align-items-center">
@@ -33,6 +35,7 @@ const displayData = (dataName) => {
           
         </div>
         `
+
         cardContainer.appendChild(newDiv);
     });
 
